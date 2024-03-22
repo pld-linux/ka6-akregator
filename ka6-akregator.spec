@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.02.0
+%define		kdeappsver	24.02.1
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		akregator
 Summary:	A KDE Feed Reader
 Name:		ka6-%{kaname}
-Version:	24.02.0
+Version:	24.02.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	87c70ce519e7dd0b8dcc458189a75578
+# Source0-md5:	187c7928f88719a6ca898c00bb53a783
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
@@ -27,7 +27,7 @@ BuildRequires:	Qt6WebEngine-devel
 BuildRequires:	Qt6Widgets-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
-BuildRequires:	grantlee-qt5-devel >= 5.1
+BuildRequires:	grantlee-qt6-devel >= 5.1
 BuildRequires:	ka6-akonadi-mime-devel
 BuildRequires:	ka6-grantleetheme-devel >= %{kdeappsver}
 BuildRequires:	ka6-kontactinterface-devel >= %{kdeappsver}
