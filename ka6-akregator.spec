@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.2
+%define		kdeappsver	24.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		akregator
 Summary:	A KDE Feed Reader
 Name:		ka6-%{kaname}
-Version:	24.05.2
+Version:	24.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	5dee7b0b03bbb7d4b98a353b4a982294
+# Source0-md5:	35c8e5e982751a8251c2d047f6232154
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
@@ -108,7 +108,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_plugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_security.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kontact/kontact_akregatorplugin.so
-%{_datadir}/akregator
 %{_desktopdir}/org.kde.akregator.desktop
 %{_datadir}/config.kcfg/akregator.kcfg
 %{_datadir}/dbus-1/interfaces/org.kde.akregator.part.xml
