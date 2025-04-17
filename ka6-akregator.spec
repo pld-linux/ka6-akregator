@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.12.3
+%define		kdeappsver	25.04.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		akregator
 Summary:	A KDE Feed Reader
 Name:		ka6-%{kaname}
-Version:	24.12.3
+Version:	25.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	01e3dcd7ff191c043ae79607c3090a24
+# Source0-md5:	137c8b2de87a5fd67b3264f618e9691e
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
@@ -45,17 +45,17 @@ BuildRequires:	kf6-knotifications-devel >= %{kframever}
 BuildRequires:	kf6-knotifyconfig-devel >= %{kframever}
 BuildRequires:	kf6-kparts-devel >= %{kframever}
 BuildRequires:	kf6-ktexteditor-devel >= %{kframever}
+BuildRequires:	kf6-kuserfeedback-devel >= %{kframever}
 BuildRequires:	kf6-kxmlgui-devel >= %{kframever}
 BuildRequires:	kf6-syndication-devel >= %{kframever}
-BuildRequires:	kuserfeedback-devel
 BuildRequires:	ninja
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-ExcludeArch:	x32 i686
 Obsoletes:	ka5-%{kaname} < %{version}
+ExcludeArch:	x32 i686
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -107,6 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_general.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_plugins.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_security.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_userfeedback.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kontact/kontact_akregatorplugin.so
 %{_desktopdir}/org.kde.akregator.desktop
 %{_datadir}/config.kcfg/akregator.kcfg
