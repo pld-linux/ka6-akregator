@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		akregator
 Summary:	A KDE Feed Reader
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	3192ce656515abb4e12713ead5746072
+# Source0-md5:	0e49e8a9e2e5d3f671d1216e3c924aa5
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
@@ -101,21 +101,21 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/akregator
 %attr(755,root,root) %{_bindir}/akregatorstorageexporter
-%attr(755,root,root) %{_libdir}/libakregatorinterfaces.so.*.*
+%{_libdir}/libakregatorinterfaces.so.*.*
 %ghost %{_libdir}/libakregatorinterfaces.so.6
-%attr(755,root,root) %{_libdir}/libakregatorprivate.so.*.*
+%{_libdir}/libakregatorprivate.so.*.*
 %ghost %{_libdir}/libakregatorprivate.so.6
-%attr(755,root,root) %{_libdir}/qt6/plugins/akregatorpart.so
+%{_libdir}/qt6/plugins/akregatorpart.so
 %dir %{_libdir}/qt6/plugins/pim6/kcms/akregator
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_advanced.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_appearance.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_archive.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_browser.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_general.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_plugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_security.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_userfeedback.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kontact/kontact_akregatorplugin.so
+%{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_advanced.so
+%{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_appearance.so
+%{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_archive.so
+%{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_browser.so
+%{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_general.so
+%{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_plugins.so
+%{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_security.so
+%{_libdir}/qt6/plugins/pim6/kcms/akregator/akregator_config_userfeedback.so
+%{_libdir}/qt6/plugins/pim6/kontact/kontact_akregatorplugin.so
 %{_desktopdir}/org.kde.akregator.desktop
 %{_datadir}/config.kcfg/akregator.kcfg
 %{_datadir}/dbus-1/interfaces/org.kde.akregator.part.xml
