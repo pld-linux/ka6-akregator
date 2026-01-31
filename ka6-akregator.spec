@@ -8,7 +8,7 @@
 Summary:	A KDE Feed Reader
 Name:		ka6-%{kaname}
 Version:	25.12.1
-Release:	3
+Release:	4
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -44,6 +44,7 @@ BuildRequires:	kf6-kiconthemes-devel >= %{kframever}
 BuildRequires:	kf6-knotifications-devel >= %{kframever}
 BuildRequires:	kf6-knotifyconfig-devel >= %{kframever}
 BuildRequires:	kf6-kparts-devel >= %{kframever}
+BuildRequires:	kf6-kstatusnotifieritem-devel >= %{kframever}
 BuildRequires:	kf6-ktexteditor-devel >= %{kframever}
 BuildRequires:	kf6-kuserfeedback-devel >= %{kframever}
 BuildRequires:	kf6-kxmlgui-devel >= %{kframever}
