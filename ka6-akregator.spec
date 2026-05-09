@@ -6,6 +6,7 @@
 %define		qtver		5.15.2
 %define		kaname		akregator
 Summary:	A KDE Feed Reader
+Summary(pl.UTF-8):	Czytnik kanałów dla KDE
 Name:		ka6-%{kaname}
 Version:	26.04.1
 Release:	1
@@ -63,6 +64,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 A KDE Feed Reader.
+
+%description -l pl.UTF-8
+Czytnik kanałów dla KDE.
 
 %prep
 %setup -q -n %{kaname}-%{version}
